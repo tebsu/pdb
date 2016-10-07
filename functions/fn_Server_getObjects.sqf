@@ -6,7 +6,7 @@ sleep 2;
 sru_debug_obj = "initializing loading..";
 publicVariable "sru_debug_obj";
 
-_sql_res = "extDB2" callExtension format["0:SQL:SELECT count(id) FROM objects WHERE mission_FK = '%1'",sru_pdb_mission_fk];  
+_sql_res = "extDB3" callExtension format["0:SQL:SELECT count(id) FROM objects WHERE mission_FK = '%1'",sru_pdb_mission_fk];  
 _sql_res = _sql_res splitString "[,]";  
 _objCnt = parseNumber (_sql_res select 1); 
 if(_objCnt > 0) then {
@@ -27,7 +27,7 @@ _cnt = 0;
 	for "_i" from 1 to (_objCnt - 1) step 1 do 
 	{
 		
-		_sql_res = "extDB2" callExtension format["0:SQL:SELECT id,objClass,objPos,objDir,objDamage,objInit FROM objects WHERE mission_FK = '%1' LIMIT %2, 1",sru_pdb_mission_fk,_i];
+		_sql_res = "extDB3" callExtension format["0:SQL:SELECT id,objClass,objPos,objDir,objDamage,objInit FROM objects WHERE mission_FK = '%1' LIMIT %2, 1",sru_pdb_mission_fk,_i];
 		_sql_res = _sql_res splitString "[,]";
 		
 		_objUID = (_sql_res select 1);

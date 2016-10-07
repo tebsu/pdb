@@ -23,9 +23,9 @@ sleep 2;
 		
 
 		if(isNil "_vehicleUID") then {
-			_sql_res = call compile ("extDB2" callExtension format["0:SQL:INSERT INTO vehicles SET vehicleType = '%1', vehiclePos = '%2', vehicleDir = '%3',vehicleFuel = '%5', vehicleDamage = '%6', mission_FK = '%4', vehicleClass = '%7', vehicleName = '%8'",_vehicleType,_vehiclePos,_vehicleDir,sru_pdb_mission_fk,_vehicleFuel,_vehicleDamage,_vehicleClass,_vehicleName]);
+			_sql_res = call compile ("extDB3" callExtension format["0:SQL:INSERT INTO vehicles SET vehicleType = '%1', vehiclePos = '%2', vehicleDir = '%3',vehicleFuel = '%5', vehicleDamage = '%6', mission_FK = '%4', vehicleClass = '%7', vehicleName = '%8'",_vehicleType,_vehiclePos,_vehicleDir,sru_pdb_mission_fk,_vehicleFuel,_vehicleDamage,_vehicleClass,_vehicleName]);
 			
-			_sql_res = "extDB2" callExtension format["0:SQL:SELECT id FROM vehicles ORDER BY id DESC LIMIT 0,1"];
+			_sql_res = "extDB3" callExtension format["0:SQL:SELECT id FROM vehicles ORDER BY id DESC LIMIT 0,1"];
 			_sql_res = _sql_res splitString "[,]";
 			_vehicleUID = _sql_res select 1;
 			
@@ -46,7 +46,7 @@ sleep 2;
 			_vehicleCrew = 0;
 		};
 
-		_sql_res = call compile ("extDB2" callExtension format["1:SQL:UPDATE vehicles SET vehicleType = '%1', vehiclePos = '%2', vehicleDir = '%3',vehicleFuel = '%5', vehicleDamage = '%6', mission_FK = '%4', vehicleClass = '%7', vehicleName = '%8',vehicleHitpoints = '%10',vehicleCrew = '%11', rec_date = NOW() WHERE id = '%9'",_vehicleType,_vehiclePos,_vehicleDir,sru_pdb_mission_fk,_vehicleFuel,_vehicleDamage,_vehicleClass,_vehicleName,_vehicleUID,_vehicleHitpointDamage,_vehicleCrew]);
+		_sql_res = call compile ("extDB3" callExtension format["1:SQL:UPDATE vehicles SET vehicleType = '%1', vehiclePos = '%2', vehicleDir = '%3',vehicleFuel = '%5', vehicleDamage = '%6', mission_FK = '%4', vehicleClass = '%7', vehicleName = '%8',vehicleHitpoints = '%10',vehicleCrew = '%11', rec_date = NOW() WHERE id = '%9'",_vehicleType,_vehiclePos,_vehicleDir,sru_pdb_mission_fk,_vehicleFuel,_vehicleDamage,_vehicleClass,_vehicleName,_vehicleUID,_vehicleHitpointDamage,_vehicleCrew]);
 
 	};
 		

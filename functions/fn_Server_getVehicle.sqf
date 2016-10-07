@@ -2,9 +2,9 @@
 *	From Database to Arma 3 Unit
 */
 
-"extDB2" callExtension format["0:SQL:UPDATE vehicles SET vehicleDamage = 0 WHERE mission_FK = '%1' AND vehicleDamage < 0.1 LIMIT 150",sru_pdb_mission_fk];
+"extDB3" callExtension format["0:SQL:UPDATE vehicles SET vehicleDamage = 0 WHERE mission_FK = '%1' AND vehicleDamage < 0.1 LIMIT 150",sru_pdb_mission_fk];
 
-_sql_res = "extDB2" callExtension format["0:SQL:SELECT vehicleType,vehiclePos,vehicleDir,id,vehicleFuel,vehicleDamage,vehicleCrew FROM vehicles WHERE mission_FK = '%1' LIMIT 150",sru_pdb_mission_fk];
+_sql_res = "extDB3" callExtension format["0:SQL:SELECT vehicleType,vehiclePos,vehicleDir,id,vehicleFuel,vehicleDamage,vehicleCrew FROM vehicles WHERE mission_FK = '%1' LIMIT 150",sru_pdb_mission_fk];
 _sql_res = _sql_res splitString "[,]";
 
 

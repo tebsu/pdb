@@ -6,7 +6,7 @@ clearBackpackCargoGlobal _object;
 clearMagazineCargoGlobal _object;
 clearWeaponCargoGlobal _object;
 
-_sql = "extDB2" callExtension format["0:SQL:SELECT objInvItem FROM objects WHERE id = '%1'",_objUID];
+_sql = "extDB3" callExtension format["0:SQL:SELECT objInvItem FROM objects WHERE id = '%1'",_objUID];
 _aResult = _sql splitString "[,]";
 
 _iCountItems = (count _aResult - 1) / 2;
@@ -20,7 +20,7 @@ if(_iCountItems > 0) then {
 	
 };
 
-_sql = "extDB2" callExtension format["0:SQL:SELECT objInvBackpack FROM objects WHERE id = '%1'",_objUID];
+_sql = "extDB3" callExtension format["0:SQL:SELECT objInvBackpack FROM objects WHERE id = '%1'",_objUID];
 _aResult = _sql splitString "[,]";
 _iCountItems = (count _aResult - 1) / 2;
 if(_iCountItems > 0) then {
@@ -33,7 +33,7 @@ if(_iCountItems > 0) then {
 
 };
 
-_sql = "extDB2" callExtension format["0:SQL:SELECT objInvMagazine FROM objects WHERE id = '%1'",_objUID];
+_sql = "extDB3" callExtension format["0:SQL:SELECT objInvMagazine FROM objects WHERE id = '%1'",_objUID];
 _aResult = _sql splitString "[,]";
 _iCountItems = (count _aResult - 1) / 2;
 if(_iCountItems > 0) then {
@@ -46,7 +46,7 @@ if(_iCountItems > 0) then {
 
 };
 
-_sql = "extDB2" callExtension format["0:SQL:SELECT objInvWeapon FROM objects WHERE id = '%1'",_objUID];
+_sql = "extDB3" callExtension format["0:SQL:SELECT objInvWeapon FROM objects WHERE id = '%1'",_objUID];
 _aResult = _sql splitString "[,]";
 _iCountItems = (count _aResult - 1) / 2;
 if(_iCountItems > 0) then {

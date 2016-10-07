@@ -1,7 +1,7 @@
 _oVehicle = _this select 0;
 _iVehicleUID = _this select 1;
 
-_sql = "extDB2" callExtension format["0:SQL:SELECT vehicleHitpoints FROM vehicles WHERE id = '%1'",_iVehicleUID];
+_sql = "extDB3" callExtension format["0:SQL:SELECT vehicleHitpoints FROM vehicles WHERE id = '%1'",_iVehicleUID];
 _aResult = _sql splitString "[,]";
 
 _iCountItems = (count _aResult - 1) / 3;

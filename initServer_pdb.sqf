@@ -1,7 +1,7 @@
 if(isNil {uiNamespace getVariable "SRU_PDB_INIT"}) then
 {
-	call compile ("extDB2" callExtension "9:ADD_DATABASE:SRU_DB");
-	call compile ("extDB2" callExtension "9:ADD_DATABASE_PROTOCOL:SRU_DB:SQL_RAW_v2:SQL");
+	call compile ("extDB3" callExtension "9:ADD_DATABASE:SRU_DB");
+	call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:SRU_DB:SQL:SQL");
 	uiNamespace setVariable ["extDB_dbID", true];
 };
 
@@ -72,12 +72,12 @@ sru_allowed_veh = [
 } forEach (vehicles);
 
 
-_sql_res = "extDB2" callExtension format["0:SQL:SELECT * FROM mission WHERE missionMap = '%1' AND missionName = '%2'",sru_pdb_map,sru_pdb_mission];
+_sql_res = "extDB3" callExtension format["0:SQL:SELECT * FROM mission WHERE missionMap = '%1' AND missionName = '%2'",sru_pdb_map,sru_pdb_mission];
 _sql_res = _sql_res splitString "[,]";
 
 if(count _sql_res < 2) then {
-	"extDB2" callExtension format["0:SQL:INSERT INTO mission SET missionMap = '%1', missionName = '%2', missionLoaded = NOW()",sru_pdb_map,sru_pdb_mission];
-	_sql_res = "extDB2" callExtension format["0:SQL:SELECT * FROM mission WHERE missionMap = '%1' AND missionName = '%2'",sru_pdb_map,sru_pdb_mission];
+	"extDB3" callExtension format["0:SQL:INSERT INTO mission SET missionMap = '%1', missionName = '%2', missionLoaded = NOW()",sru_pdb_map,sru_pdb_mission];
+	_sql_res = "extDB3" callExtension format["0:SQL:SELECT * FROM mission WHERE missionMap = '%1' AND missionName = '%2'",sru_pdb_map,sru_pdb_mission];
 	_sql_res = _sql_res splitString "[,]";
 	sru_pdb_mission_fk = (_sql_res select 1);
 	publicVariable "sru_pdb_mission_fk";
@@ -91,7 +91,7 @@ if(count _sql_res < 2) then {
 } else {
 	sru_pdb_mission_fk = (_sql_res select 1);
 	publicVariable "sru_pdb_mission_fk";
-	"extDB2" callExtension format["0:SQL:UPDATE mission SET missionLoaded = NOW() WHERE id = '%1'",sru_pdb_mission_fk];
+	"extDB3" callExtension format["0:SQL:UPDATE mission SET missionLoaded = NOW() WHERE id = '%1'",sru_pdb_mission_fk];
 	
 	_getVeh = [] execVM "\sru_pdb\functions\fn_Server_getVehicle.sqf";
 	waitUntil{scriptDone _getVeh};

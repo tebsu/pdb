@@ -19,7 +19,7 @@ if(_unitPosition == "Driver") then {
 	_vehicleClass = getText (configFile >> "CfgVehicles" >> _vehicleType >> "vehicleClass");
 	
 	if(isNil {(_x getVariable "sru_disable_pdb")}) then	{
-		_sql = call compile ("extDB2" callExtension format["0:SQL:UPDATE vehicles SET vehiclePos = '%1', vehicleDir = '%2',vehicleFuel = '%5', vehicleDamage = '%6', vehicleLastDriver = '%7',vehicleHitpoints = '%8',vehicleLastRide = NOW(),vehicleCrew = 0, rec_date = NOW() WHERE id = '%4' AND mission_FK = '%3'",_vehiclePos,_vehicleDir,sru_pdb_mission_fk,_vehicleUID,_vehicleFuel,_vehicleDamage,_lastDriver,_vehicleHitpointDamage]);
+		_sql = call compile ("extDB3" callExtension format["0:SQL:UPDATE vehicles SET vehiclePos = '%1', vehicleDir = '%2',vehicleFuel = '%5', vehicleDamage = '%6', vehicleLastDriver = '%7',vehicleHitpoints = '%8',vehicleLastRide = NOW(),vehicleCrew = 0, rec_date = NOW() WHERE id = '%4' AND mission_FK = '%3'",_vehiclePos,_vehicleDir,sru_pdb_mission_fk,_vehicleUID,_vehicleFuel,_vehicleDamage,_lastDriver,_vehicleHitpointDamage]);
 		_null = [_vehicle,_vehicleUID] execVM "\sru_pdb\functions\fn_Server_setVehicleInventory.sqf";
 	};
 };
