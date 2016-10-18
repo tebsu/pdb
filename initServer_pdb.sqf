@@ -55,8 +55,12 @@ sru_allowed_veh = [
 	"BWE_KF",
 	"EWK_Cars",
 	"BWA3_VehClass_Wheeled_Fleck",
+	"BWA3_VehClass_Wheeled_Tropen",
 	"air",
-	"BWE_HS"
+	"BWE_HS",
+	"Huey_Helicopters_UH1D",
+	"UH1HT_base",
+	"UH1H_base"
 ];
 
 {

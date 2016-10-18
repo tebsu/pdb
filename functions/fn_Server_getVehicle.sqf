@@ -70,8 +70,9 @@ if(count _sql_res > 2) then {
 		_x allowDamage true;
 		_vehicleType = typeOf _x;
 		_vehicleClass = getText (configFile >> "CfgVehicles" >> _vehicleType >> "vehicleClass");
-		if(_vehicleClass == "Car" || _vehicleClass == "Autonomous" || _vehicleClass == "Armored" || _vehicleClass == "Air" || _vehicleClass == "Ship" || _vehicleClass == "Support" || _vehicleClass == "BWE_RF" || _vehicleClass == "BWE_KF" || _vehicleClass == "EWK_Cars" || _vehicleClass == "BWA3_VehClass_Wheeled_Fleck" || _vehicleClass == "air" || _vehicleClass == "BWE_HS") then {
-			_vehicleUID = _x getVariable "vehicleuid";
+		//if(_vehicleClass == "Car" || _vehicleClass == "Autonomous" || _vehicleClass == "Armored" || _vehicleClass == "Air" || _vehicleClass == "Ship" || _vehicleClass == "Support" || _vehicleClass == "BWE_RF" || _vehicleClass == "BWE_KF" || _vehicleClass == "EWK_Cars" || _vehicleClass == "BWA3_VehClass_Wheeled_Fleck" || _vehicleClass == "air" || _vehicleClass == "BWE_HS") then {
+		if (_vehicleClass in sru_allowed_veh) then {
+		_vehicleUID = _x getVariable "vehicleuid";
 			_vehDamage = [_x,_vehicleUID] execVM "\sru_pdb\functions\fn_Server_getVehicleHitpointDamage.sqf";
 			waitUntil{scriptDone _vehDamage};
 		};

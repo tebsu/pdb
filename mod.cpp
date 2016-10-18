@@ -1,6 +1,6 @@
-dir = "@sru_pdb";
-picture = "SRU.paa";
-name = "SRU Persistent Database";
+dir = "@pdb";
+//picture = "SRU.paa";
+name = "Arma3 Persistent Database";
 actionName = "Website";
-action = "http://sru-gaming.de";
-description = "SRU PDB by tulrich & Spackenbremse";
+action = "http://kso.de";
+description = "PDB by tulrich & Spackenbremse";

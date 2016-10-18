@@ -1,8 +1,8 @@
 class CfgPatches
 {
-	class SRU_PDB
+	class PDB
 	{
-		units[] = {"SRU_PDB"};
+		units[] = {"PDB"};
 		requiredVersion = 1.0;
 		requiredAddons[] = {"A3_Modules_F"};
 	};

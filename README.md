@@ -1,3 +1,3 @@
 # Need help?
 
-Have a look at https://github.com/tebsu/SRU/wiki
+Stand by, something huge is comming.. and no, we are not talking about a d****
