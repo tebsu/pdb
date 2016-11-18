@@ -59,8 +59,8 @@ sru_allowed_veh = [
 	"air",
 	"BWE_HS",
 	"Huey_Helicopters_UH1D",
-	"UH1HT_base",
-	"UH1H_base"
+	"14jgkp_Vehicle_Flecktarn",
+	"CY_vehicule"
 ];
 
 {
