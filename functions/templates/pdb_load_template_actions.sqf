@@ -15,6 +15,7 @@ if(_iCountItems > 0) then {
 		
 		//systemChat format["ID: %1 | Name: %2",(_sql_res select _i),(_sql_res select _i+1)];
 		//_object addAction [format["Load: %1",(_sql_res select _i+1)], "\pdb\functions\templates\pdb_load_template.sqf", [(_sql_res select _i)]];
+		pdb_load_template_id = 
 		[_object, [format["Load: %1",(_sql_res select _i+1)], "\pdb\functions\templates\pdb_load_template.sqf", [(_sql_res select _i)]]] remoteExec ["addAction", -2, _object];
 
 	};

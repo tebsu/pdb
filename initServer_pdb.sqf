@@ -76,6 +76,9 @@ pdb_allowed_veh = [
 } forEach (vehicles);
 
 
+_setInterface = [pdb_template_interface] execVM "\pdb\functions\templates\pdb_load_template_actions.sqf";
+waitUntil{scriptDone _setInterface};
+
 _sql_res = "extDB3" callExtension format["0:SQL:SELECT * FROM mission WHERE missionMap = '%1' AND missionName = '%2'",pdb_map,pdb_mission];
 _sql_res = _sql_res splitString "[,]";
 
@@ -134,6 +137,5 @@ while {true} do {
 	};
 };
 
-_setInterface = [] execVM "\pdb\functions\templates\pdb_load_template_actions.sqf";
-waitUntil{scriptDone _setInterface};
+
 
