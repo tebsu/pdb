@@ -2,9 +2,9 @@
 *	From Database to Arma 3 Unit
 */
 
-"extDB3" callExtension format["0:SQL:UPDATE vehicles SET vehicleDamage = 0 WHERE mission_FK = '%1' AND vehicleDamage < 0.1 LIMIT 150",sru_pdb_mission_fk];
+"extDB3" callExtension format["0:SQL:UPDATE vehicles SET vehicleDamage = 0 WHERE mission_FK = '%1' AND vehicleDamage < 0.1 LIMIT 150",pdb_mission_fk];
 
-_sql_res = "extDB3" callExtension format["0:SQL:SELECT vehicleType,vehiclePos,vehicleDir,id,vehicleFuel,vehicleDamage,vehicleCrew FROM vehicles WHERE mission_FK = '%1' LIMIT 150",sru_pdb_mission_fk];
+_sql_res = "extDB3" callExtension format["0:SQL:SELECT vehicleType,vehiclePos,vehicleDir,id,vehicleFuel,vehicleDamage,vehicleCrew FROM vehicles WHERE mission_FK = '%1' LIMIT 150",pdb_mission_fk];
 _sql_res = _sql_res splitString "[,]";
 
 
@@ -12,9 +12,9 @@ if(count _sql_res > 2) then {
 	{
 		_vehicleType = typeOf _x;
 		_vehicleClass = getText (configFile >> "CfgVehicles" >> _vehicleType >> "vehicleClass");
-		_disableFlag = _x getVariable "sru_disable_pdb";
+		_disableFlag = _x getVariable "disable_pdb";
 		
-		if(_vehicleClass in sru_allowed_veh && isNil "_disableFlag") then {
+		if(_vehicleClass in pdb_allowed_veh && isNil "_disableFlag") then {
 			deleteVehicle _x;
 		};
 	} forEach (vehicles);
@@ -53,9 +53,9 @@ if(count _sql_res > 2) then {
 		
 		_veh setVariable["vehicleuid",[_vehicleUID],true];
 		_veh setFuel _vehicleFuel;
-		_veh addEventHandler ["GetOut", {[_this select 0, _this select 2,_this select 1] execVM "\sru_pdb\functions\fn_Server_setSingleVehicle.sqf";}];
+		_veh addEventHandler ["GetOut", {[_this select 0, _this select 2,_this select 1] execVM "\pdb\functions\fn_Server_setSingleVehicle.sqf";}];
 		
-		_vehFinal = [_veh,_vehicleUID] execVM "\sru_pdb\functions\fn_Server_getVehicleInventory.sqf";
+		_vehFinal = [_veh,_vehicleUID] execVM "\pdb\functions\fn_Server_getVehicleInventory.sqf";
 		waitUntil{scriptDone _vehFinal};
 		
 		if(_vehicleCrew == 1)then{
@@ -71,9 +71,9 @@ if(count _sql_res > 2) then {
 		_vehicleType = typeOf _x;
 		_vehicleClass = getText (configFile >> "CfgVehicles" >> _vehicleType >> "vehicleClass");
 		//if(_vehicleClass == "Car" || _vehicleClass == "Autonomous" || _vehicleClass == "Armored" || _vehicleClass == "Air" || _vehicleClass == "Ship" || _vehicleClass == "Support" || _vehicleClass == "BWE_RF" || _vehicleClass == "BWE_KF" || _vehicleClass == "EWK_Cars" || _vehicleClass == "BWA3_VehClass_Wheeled_Fleck" || _vehicleClass == "air" || _vehicleClass == "BWE_HS") then {
-		if (_vehicleClass in sru_allowed_veh) then {
+		if (_vehicleClass in pdb_allowed_veh) then {
 		_vehicleUID = _x getVariable "vehicleuid";
-			_vehDamage = [_x,_vehicleUID] execVM "\sru_pdb\functions\fn_Server_getVehicleHitpointDamage.sqf";
+			_vehDamage = [_x,_vehicleUID] execVM "\pdb\functions\fn_Server_getVehicleHitpointDamage.sqf";
 			waitUntil{scriptDone _vehDamage};
 		};
 	

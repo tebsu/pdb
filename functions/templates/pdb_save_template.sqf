@@ -1,8 +1,8 @@
 
 
 call compile ("extDB3" callExtension "9:RESET");
-call compile ("extDB3" callExtension "9:ADD_DATABASE:SRU_DB");
-call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:SRU_DB:SQL:SQL");
+call compile ("extDB3" callExtension "9:ADD_DATABASE:PDB_DB");
+call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:PDB_DB:SQL:SQL");
 
 
 _pdb_marker_pos = getMarkerPos "pdb_refill";
