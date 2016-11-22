@@ -20,6 +20,6 @@ if(_unitPosition == "Driver") then {
 	
 	if(isNil {(_x getVariable "disable_pdb")}) then	{
 		_sql = call compile ("extDB3" callExtension format["0:SQL:UPDATE vehicles SET vehiclePos = '%1', vehicleDir = '%2',vehicleFuel = '%5', vehicleDamage = '%6', vehicleLastDriver = '%7',vehicleHitpoints = '%8',vehicleLastRide = NOW(),vehicleCrew = 0, rec_date = NOW() WHERE id = '%4' AND mission_FK = '%3'",_vehiclePos,_vehicleDir,pdb_mission_fk,_vehicleUID,_vehicleFuel,_vehicleDamage,_lastDriver,_vehicleHitpointDamage]);
-		_null = [_vehicle,_vehicleUID] execVM "\pdb\functions\fn_Server_setVehicleInventory.sqf";
+		_null = [_vehicle,_vehicleUID] execVM "\pdb\functions\vehicles\fn_Server_setVehicleInventory.sqf";
 	};
 };

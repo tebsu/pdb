@@ -53,9 +53,9 @@ if(count _sql_res > 2) then {
 		
 		_veh setVariable["vehicleuid",[_vehicleUID],true];
 		_veh setFuel _vehicleFuel;
-		_veh addEventHandler ["GetOut", {[_this select 0, _this select 2,_this select 1] execVM "\pdb\functions\fn_Server_setSingleVehicle.sqf";}];
+		_veh addEventHandler ["GetOut", {[_this select 0, _this select 2,_this select 1] execVM "\pdb\functions\vehicles\fn_Server_setSingleVehicle.sqf";}];
 		
-		_vehFinal = [_veh,_vehicleUID] execVM "\pdb\functions\fn_Server_getVehicleInventory.sqf";
+		_vehFinal = [_veh,_vehicleUID] execVM "\pdb\functions\vehicles\fn_Server_getVehicleInventory.sqf";
 		waitUntil{scriptDone _vehFinal};
 		
 		if(_vehicleCrew == 1)then{
@@ -73,7 +73,7 @@ if(count _sql_res > 2) then {
 		//if(_vehicleClass == "Car" || _vehicleClass == "Autonomous" || _vehicleClass == "Armored" || _vehicleClass == "Air" || _vehicleClass == "Ship" || _vehicleClass == "Support" || _vehicleClass == "BWE_RF" || _vehicleClass == "BWE_KF" || _vehicleClass == "EWK_Cars" || _vehicleClass == "BWA3_VehClass_Wheeled_Fleck" || _vehicleClass == "air" || _vehicleClass == "BWE_HS") then {
 		if (_vehicleClass in pdb_allowed_veh) then {
 		_vehicleUID = _x getVariable "vehicleuid";
-			_vehDamage = [_x,_vehicleUID] execVM "\pdb\functions\fn_Server_getVehicleHitpointDamage.sqf";
+			_vehDamage = [_x,_vehicleUID] execVM "\pdb\functions\vehicles\fn_Server_getVehicleHitpointDamage.sqf";
 			waitUntil{scriptDone _vehDamage};
 		};
 	

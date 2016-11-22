@@ -61,7 +61,7 @@ _cnt = 0;
 		_obj allowDamage true;
 		
 
-		_get_inv = [_obj,_objUID] execVM "\pdb\functions\fn_Server_getObjectInventory.sqf";
+		_get_inv = [_obj,_objUID] execVM "\pdb\functions\objects\fn_Server_getObjectInventory.sqf";
 		waitUntil{scriptDone _get_inv}
 	};
 	

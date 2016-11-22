@@ -86,10 +86,10 @@ if(count _sql_res < 2) then {
 	pdb_mission_fk = (_sql_res select 1);
 	publicVariable "pdb_mission_fk";
 	
-	_setVeh = [] execVM "\pdb\functions\fn_Server_setVehicle.sqf";
+	_setVeh = [] execVM "\pdb\functions\vehicles\fn_Server_setVehicle.sqf";
 	waitUntil{scriptDone _setVeh};
 	
-	_setObj = [] execVM "\pdb\functions\fn_Server_setObjects.sqf";
+	_setObj = [] execVM "\pdb\functions\objects\fn_Server_setObjects.sqf";
 	waitUntil{scriptDone _setObj};
 	
 } else {
@@ -97,14 +97,14 @@ if(count _sql_res < 2) then {
 	publicVariable "pdb_mission_fk";
 	"extDB3" callExtension format["0:SQL:UPDATE mission SET missionLoaded = NOW() WHERE id = '%1'",pdb_mission_fk];
 	
-	_getVeh = [] execVM "\pdb\functions\fn_Server_getVehicle.sqf";
+	_getVeh = [] execVM "\pdb\functions\vehicles\fn_Server_getVehicle.sqf";
 	waitUntil{scriptDone _getVeh};
 	
-	_getObj = [] execVM "\pdb\functions\fn_Server_getObjects.sqf";
+	_getObj = [] execVM "\pdb\functions\objects\fn_Server_getObjects.sqf";
 	waitUntil{scriptDone _getObj};
 };
 
-_markers = [] execVM "\pdb\functions\fn_Server_getMarkers.sqf";
+_markers = [] execVM "\pdb\functions\misc\fn_Server_getMarkers.sqf";
 waitUntil{scriptDone _markers};
 
 pdb_cnt = 59;
@@ -114,11 +114,11 @@ while {true} do {
 	pdb_cnt = pdb_cnt + 1;
 
 	sleep 1;
-	_null = [] execVM "\pdb\functions\fn_Server_resupply.sqf";
-	_setVehicle = [] execVM "\pdb\functions\fn_Server_setVehicle.sqf";
+	_null = [] execVM "\pdb\functions\misc\fn_Server_resupply.sqf";
+	_setVehicle = [] execVM "\pdb\functions\vehicles\fn_Server_setVehicle.sqf";
 	
 	{
-		_setUnit = [_x] execVM "\pdb\functions\fn_Server_setUnit.sqf";
+		_setUnit = [_x] execVM "\pdb\functions\units\fn_Server_setUnit.sqf";
 		waitUntil{scriptDone _setUnit};
 
 	} forEach allPlayers;
@@ -127,9 +127,9 @@ while {true} do {
 
 	if(pdb_cnt >= 60) then {
 		
-		_setObj = [] execVM "\pdb\functions\fn_Server_setObjects.sqf";
+		_setObj = [] execVM "\pdb\functions\objects\fn_Server_setObjects.sqf";
 		waitUntil{scriptDone _setObj};
-		[] execVM "\pdb\functions\fn_Server_cleanupDB.sqf";
+		[] execVM "\pdb\functions\misc\fn_Server_cleanupDB.sqf";
 		pdb_cnt = 0;
 	};
 };

@@ -39,7 +39,7 @@ _cnt = 0;
 				_objUID = _sql_res select 1;
 				_x setVariable ["pdb_objectUID", _objUID, true];
 				
-				_save_inv = [_x,_objUID] execVM "\pdb\functions\fn_Server_setObjectInventory.sqf";
+				_save_inv = [_x,_objUID] execVM "\pdb\functions\objects\fn_Server_setObjectInventory.sqf";
 				waitUntil{scriptDone _save_inv};
 				
 				pdb_debug_obj = format["saving objects | (new) %1 / %2 -> %3",_cnt,_objCnt,_objType];
@@ -51,7 +51,7 @@ _cnt = 0;
 			else
 			{
 				"extDB3" callExtension format["0:SQL:UPDATE objects SET objPos = '%1', objDir = '%2',objDamage = '%3', objRecDate = NOW() WHERE id = '%4'",_objPos,_objDir,_objDamage,_objUID];
-				_save_inv = [_x,_objUID] execVM "\pdb\functions\fn_Server_setObjectInventory.sqf";
+				_save_inv = [_x,_objUID] execVM "\pdb\functions\objects\fn_Server_setObjectInventory.sqf";
 				waitUntil{scriptDone _save_inv};
 				pdb_debug_obj = format["saving objects | (update) %1 / %2 -> %3",_cnt,_objCnt,_objType];
 				publicVariable "pdb_debug_obj";

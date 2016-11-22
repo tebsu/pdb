@@ -29,14 +29,14 @@ sleep 2;
 			_sql_res = _sql_res splitString "[,]";
 			_vehicleUID = _sql_res select 1;
 			
-			_x addEventHandler ["GetOut", {[_this select 0, _this select 2,_this select 1] execVM "\pdb\functions\fn_Server_setSingleVehicle.sqf";}];
+			_x addEventHandler ["GetOut", {[_this select 0, _this select 2,_this select 1] execVM "\pdb\functions\vehicles\fn_Server_setSingleVehicle.sqf";}];
 			_x setVariable["vehicleuid",[_vehicleUID],true];
 		};
 
 		_vehicleUIDArray = _x getVariable "vehicleuid";
 		_vehicleUID = _vehicleUIDArray select 0;
 		
-		_null = [_x,_vehicleUID] execVM "\pdb\functions\fn_Server_setVehicleInventory.sqf";
+		_null = [_x,_vehicleUID] execVM "\pdb\functions\vehicles\fn_Server_setVehicleInventory.sqf";
 		
 		
 		if(count _vehicleCrew > 0) then {

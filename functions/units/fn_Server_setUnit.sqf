@@ -21,7 +21,7 @@ if(count _sql_res < 2) then {
 };
 
 if(!isNull(getConnectedUAV _Player)) then { 
-	[getConnectedUAV _Player,_Player,"Driver"]execVM "\pdb\functions\fn_Server_setSingleVehicle.sqf"; 
+	[getConnectedUAV _Player,_Player,"Driver"]execVM "\pdb\functions\vehicles\fn_Server_setSingleVehicle.sqf"; 
 };
 
 "extDB3" callExtension format["0:SQL:INSERT IGNORE INTO player_mission_connection SET playerUID = '%1',mission_FK = '%2'",_playerUID,pdb_mission_fk];
