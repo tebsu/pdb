@@ -1,5 +1,5 @@
 _object = pdb_template_interface;
-removeAllActions _object;
+_object remoteExec ["removeAllActions",-2];
 
 _sql_res = "extDB3" callExtension format["0:SQL:SELECT id,invName FROM inventory_templates"];
 _sql_res = _sql_res splitString "[,]";
