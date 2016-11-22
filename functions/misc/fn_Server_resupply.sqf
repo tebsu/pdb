@@ -22,7 +22,7 @@ if(count _sql_res > 2 ) then {
 			_objectDir = call compile (_sql_res select (_i+7));
 			_obj = _objectType createVehicle [_objectPosX,_objectPosY,_objectPosZ];
 			_obj setPos [_objectPosX,_objectPosY,_objectPosZ];
-			_obj addEventHandler ["GetOut", {[_this select 0, _this select 2,_this select 1] execVM "\pdb\functions\fn_Server_setSingleobject.sqf";}];
+			_obj addEventHandler ["GetOut", {[_this select 0, _this select 2,_this select 1] execVM "\pdb\functions\objects\fn_Server_setSingleobject.sqf";}];
 			
 			clearItemCargoGlobal _obj;
 			clearBackpackCargoGlobal _obj;

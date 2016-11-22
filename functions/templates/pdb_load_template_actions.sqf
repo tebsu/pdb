@@ -21,7 +21,7 @@ if(_iCountItems > 0) then {
 		//_object addItemCargoGlobal [_item, _itemAmount];
 		
 		//systemChat format["ID: %1 | Name: %2",(_sql_res select _i),(_sql_res select _i+1)];
-		_object addAction [format["Load: %1",(_sql_res select _i+1)], "pdb_load_template.sqf", [(_sql_res select _i)]]
+		_object addAction [format["Load: %1",(_sql_res select _i+1)], "\pdb\functions\templates\pdb_load_template.sqf", [(_sql_res select _i)]]
 	};
 	
 };

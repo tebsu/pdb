@@ -2,7 +2,6 @@
 *	From Arma 3 Unit to Database
 */
 
-
 sleep 2;
 
 {

@@ -2,7 +2,6 @@
 *	From Arma 3 Unit to Database
 */
 
-
 _unitPosition = _this select 2;
 
 if(_unitPosition == "Driver") then {
