@@ -17,11 +17,6 @@ _cnt = 0;
 	_objPos = format ["%1",(getPosWorld _x)];
 	_objDir = format ["%1",(round getDir _x)];
 	_objDamage = (damage _x);
-	_objInit = format["%1",_x getVariable "pdb_init"];
-	
-	if(isNil "_objInit") then {
-		_objInit = "NULL";
-	};
 	
 	if(_objDamage < 0.1) then {
 		_objDamage = "0";

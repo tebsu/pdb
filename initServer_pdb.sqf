@@ -1,8 +1,8 @@
-if(isNil {uiNamespace getVariable "pdb_INIT"}) then
+if(isNil {uiNamespace getVariable "pdb_init"}) then
 {
 	call compile ("extDB3" callExtension "9:ADD_DATABASE:PDB_DB");
 	call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:PDB_DB:SQL:SQL");
-	uiNamespace setVariable ["extDB_dbID", true];
+	uiNamespace setVariable ["pdb_init", true];
 };
 
 pdb_map = format["%1",worldName];

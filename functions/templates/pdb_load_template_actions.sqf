@@ -1,12 +1,10 @@
 _object = _this select 0;
 removeAllActions _object;
 
-
 _sql_res = "extDB3" callExtension format["0:SQL:SELECT id,invName FROM inventory_templates"];
 _sql_res = _sql_res splitString "[,]";
 
 _iCountItems = (count _sql_res - 1);
-
 
 if(_iCountItems > 0) then {
 	for "_i" from 1 to _iCountItems step 2 do 
