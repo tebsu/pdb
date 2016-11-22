@@ -134,5 +134,6 @@ while {true} do {
 	};
 };
 
-
+_setInterface = [] execVM "\pdb\functions\templates\pdb_load_template_actions.sqf";
+waitUntil{scriptDone _setInterface};
 

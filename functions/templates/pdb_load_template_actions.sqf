@@ -1,4 +1,4 @@
-_object = _this select 0;
+_object = pdb_template_interface;
 removeAllActions _object;
 
 _sql_res = "extDB3" callExtension format["0:SQL:SELECT id,invName FROM inventory_templates"];
@@ -14,9 +14,12 @@ if(_iCountItems > 0) then {
 		//_object addItemCargoGlobal [_item, _itemAmount];
 		
 		//systemChat format["ID: %1 | Name: %2",(_sql_res select _i),(_sql_res select _i+1)];
-		_object addAction [format["Load: %1",(_sql_res select _i+1)], "\pdb\functions\templates\pdb_load_template.sqf", [(_sql_res select _i)]];
+		//_object addAction [format["Load: %1",(_sql_res select _i+1)], "\pdb\functions\templates\pdb_load_template.sqf", [(_sql_res select _i)]];
+		[_object, [format["Load: %1",(_sql_res select _i+1)], "\pdb\functions\templates\pdb_load_template.sqf", [(_sql_res select _i)]]] remoteExec ["addAction", -2, _object];
+
 	};
 	
 };
 
-	_object addAction ["<t color='#00FF33'>Refresh</t>", "\pdb\functions\templates\pdb_load_template_actions.sqf", [_object]];
+	//_object addAction ["<t color='#00FF33'>Refresh</t>", "\pdb\functions\templates\pdb_load_template_actions.sqf", [_object]];
+	[_object, ["<t color='#00FF33'>Refresh</t>", "\pdb\functions\templates\pdb_load_template_actions.sqf"]] remoteExec ["addAction", -2, _object];
