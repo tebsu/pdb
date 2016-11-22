@@ -1,12 +1,5 @@
-
-
-call compile ("extDB3" callExtension "9:RESET");
-call compile ("extDB3" callExtension "9:ADD_DATABASE:PDB_DB");
-call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:PDB_DB:SQL:SQL");
-
-
-_pdb_marker_pos = getMarkerPos "pdb_refill";
-_object = nearestObjects[_pdb_marker_pos,["all"],2];
+_pdb_marker_pos = getMarkerPos "pdb_template_station";
+_object = nearestObjects[_pdb_marker_pos,["all"],3];
 _object = _object select 0;
 
 _objClassName = str formatText ["%1 on %3.%2", (typeof (_object)),worldName,missionName];

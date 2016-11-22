@@ -1,11 +1,4 @@
-
-
-call compile ("extDB3" callExtension "9:RESET");
-call compile ("extDB3" callExtension "9:ADD_DATABASE:PDB_DB");
-call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:PDB_DB:SQL:SQL");
-
-
-_pdb_marker_pos = getMarkerPos "pdb_refill";
+_pdb_marker_pos = getMarkerPos "pdb_template_station";
 _object = nearestObjects[_pdb_marker_pos,["all"],2];
 _object = _object select 0;
 _template_id = _this select 3 select 0;

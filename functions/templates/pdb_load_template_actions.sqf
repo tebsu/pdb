@@ -1,8 +1,3 @@
-call compile ("extDB3" callExtension "9:RESET");
-call compile ("extDB3" callExtension "9:ADD_DATABASE:PDB_DB");
-call compile ("extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:PDB_DB:SQL:SQL");
-
-
 _object = _this select 0;
 removeAllActions _object;
 
@@ -25,3 +20,5 @@ if(_iCountItems > 0) then {
 	};
 	
 };
+
+	_object addAction ["<t color='#00FF33'>Refresh</t>", "\pdb\functions\templates\pdb_load_template_actions.sqf", [_object]]
