@@ -1,7 +1,7 @@
 _pdb_marker_pos = getMarkerPos "pdb_template_station";
 _object = nearestObjects[_pdb_marker_pos,["all"],3];
 _object = _object select 0;
-_template_id = _this select 3 select 0;
+_template_id = _this select 0;
 
 clearItemCargoGlobal _object;
 clearBackpackCargoGlobal _object;
