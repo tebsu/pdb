@@ -3,7 +3,9 @@ _object = nearestObjects[_pdb_marker_pos,["all"],3];
 _object = _object select 0;
 _objClass = typeof _object;
 
-if(!(isPlayer _objClass) && !(_objType in pdb_blacklist_Obj)) then {
+
+//!(isPlayer _objClass) && 
+if(!(_objType in pdb_blacklist_Obj)) then {
 
 _objClassName = str formatText ["%1 on %3.%2", (typeof (_object)),worldName,missionName];
 _objItemCargo = str formatText ["%1", (getItemCargo _object)];
@@ -12,12 +14,4 @@ _objMagazineCargo = str formatText ["%1", (getMagazineCargo _object)];
 _objWeaponCargo = str formatText ["%1", (getWeaponCargo _object)];
 
 _sql_res = "extDB3" callExtension format["0:SQL:INSERT INTO inventory_templates SET invItem = '%1',invBackpack = '%2',invMagazine = '%3',invWeapon = '%4', invName = '%5'",_objItemCargo,_objBachpackCargo,_objMagazineCargo,_objWeaponCargo,_objClassName];
-
-
-	_z = ((boundingBox _object) select 1 select 0) - ((boundingBox _object) select 0 select 0)
-	_arrow = "VR_3DSelector_01_exit_F" createVehicle [0,0,0];
-    _arrow attachTo [_object, [0,0,_z]];
-	sleep 5;
-	deleteVehicle _arrow;
-
 }
