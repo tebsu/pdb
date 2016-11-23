@@ -40,7 +40,8 @@ pdb_blacklist_Obj = [
 	"Land_Shoot_House_Wall_Crouch_F",
 	"Land_Shoot_House_Wall_Long_F",
 	"Land_Shoot_House_Wall_Long_Stand_F",
-	"Land_Shoot_House_Wall_Long_Prone_F"
+	"Land_Shoot_House_Wall_Long_Prone_F",
+	"Line_short_F"
 ];
 					
 pdb_allowed_veh = [
@@ -76,7 +77,7 @@ pdb_allowed_veh = [
 } forEach (vehicles);
 
 
-_setInterface = [pdb_template_interface] execVM "\pdb\functions\templates\pdb_load_template_actions.sqf";
+_setInterface = [pdb_template_interface] execVM "\pdb\functions\templates\fn_Server_load_template_actions.sqf";
 waitUntil{scriptDone _setInterface};
 
 _sql_res = "extDB3" callExtension format["0:SQL:SELECT * FROM mission WHERE missionMap = '%1' AND missionName = '%2'",pdb_map,pdb_mission];
