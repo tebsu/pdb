@@ -3,7 +3,7 @@ _object = nearestObjects[_pdb_marker_pos,["all"],3];
 _object = _object select 0;
 _objClass = typeof _object;
 
-if(!(_objClass isPlayer) && !(_objType in pdb_blacklist_Obj)) then {
+if(!(isPlayer _objClass) && !(_objType in pdb_blacklist_Obj)) then {
 
 _objClassName = str formatText ["%1 on %3.%2", (typeof (_object)),worldName,missionName];
 _objItemCargo = str formatText ["%1", (getItemCargo _object)];
