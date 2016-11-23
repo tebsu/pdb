@@ -4,8 +4,8 @@ _object = _object select 0;
 _objClass = typeof _object;
 
 
-//!(isPlayer _objClass) && 
-if(!(_objType in pdb_blacklist_Obj)) then {
+
+if(!(isPlayer _object) && !(_objClass in pdb_blacklist_Obj)) then {
 
 _objClassName = str formatText ["%1 on %3.%2", (typeof (_object)),worldName,missionName];
 _objItemCargo = str formatText ["%1", (getItemCargo _object)];
