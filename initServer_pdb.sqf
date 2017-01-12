@@ -41,7 +41,8 @@ pdb_blacklist_Obj = [
 	"Land_Shoot_House_Wall_Long_F",
 	"Land_Shoot_House_Wall_Long_Stand_F",
 	"Land_Shoot_House_Wall_Long_Prone_F",
-	"Line_short_F"
+	"Line_short_F",
+	"VR_Area_01_circle_4_yellow_F"
 ];
 					
 pdb_allowed_veh = [
