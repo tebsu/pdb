@@ -18,16 +18,16 @@ if(isServer) then {if(local player) then {DAC_Code = 1} else {DAC_Code = 0}} els
 // DAC_Settings	 |
 //===============|=============================================================================================|
 
-	if(isNil "DAC_STRPlayers")		then {		DAC_STRPlayers		= ["s1","s2","s3","s4","s5","s6","s7","s8","s9","s10"]};
+	if(isNil "DAC_STRPlayers")		then {		DAC_STRPlayers		= ["s1","s2","s3","s4","s5","s6","s7","s8","s9","s10","s11","s12","s13","s14","s15","s16"]};
 	if(isNil "DAC_AI_Count_Level")	then {		DAC_AI_Count_Level  = [[2,4],[3,6],[4,8],[6,12],[1,0]]			};
 	if(isNil "DAC_Dyn_Weather") 	then {		DAC_Dyn_Weather		= [0,0,0,[0, 0, 0],0]						};
-	if(isNil "DAC_Reduce_Value") 	then {		DAC_Reduce_Value	= [800,850,0.3]								};
+	if(isNil "DAC_Reduce_Value") 	then {		DAC_Reduce_Value	= [1000,1050,0.3]							};
 	if(isNil "DAC_AI_Spawn") 		then {		DAC_AI_Spawn		= [[10,5,5],[10,5,15],0,120,250,0]			};
-	if(isNil "DAC_Delete_Value") 	then {		DAC_Delete_Value	= [[180,150],[180,150],6000]				};
+	if(isNil "DAC_Delete_Value") 	then {		DAC_Delete_Value	= [[180,150],[9000,150],9000]				};
 	if(isNil "DAC_Del_PlayerBody") 	then {		DAC_Del_PlayerBody	= [0,0]										};
 	if(isNil "DAC_Com_Values") 		then {		DAC_Com_Values		= [0,2,0,0]									};
 	if(isNil "DAC_AI_AddOn") 		then {		DAC_AI_AddOn		= 1											};
-	if(isNil "DAC_AI_Level") 		then {		DAC_AI_Level		= 3											};
+	if(isNil "DAC_AI_Level") 		then {		DAC_AI_Level		= 2											};
 	if(isNil "DAC_Res_Side") 		then {		DAC_Res_Side		= 0											};
 	if(isNil "DAC_Marker") 			then {		DAC_Marker			= 0											};
 	if(isNil "DAC_WP_Speed") 		then {		DAC_WP_Speed		= 0.01										};

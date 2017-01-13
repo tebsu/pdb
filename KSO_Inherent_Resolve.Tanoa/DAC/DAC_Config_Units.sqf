@@ -14,13 +14,13 @@ _TypNumber = _this select 0;_TempArray = [];
 switch (_TypNumber) do
 {
 //-------------------------------------------------------------------------------------------------
-// REDFOR (A3)
+// REDFOR (A3) // KSO ISIS
   case 0:
   {
-    _Unit_Pool_S = ["O_crew_F","O_Helipilot_F","O_Soldier_SL_F","O_soldier_AR_F","O_soldier_AR_F","O_soldier_exp_F","O_soldier_GL_F","O_soldier_GL_F","O_soldier_M_F","O_medic_F","O_soldier_AA_F","O_soldier_repair_F","O_Soldier_F","O_Soldier_F","O_soldier_LAT_F","O_soldier_LAT_F","O_soldier_lite_F","O_soldier_TL_F","O_soldier_TL_F"];
-    _Unit_Pool_V = ["O_MRAP_02_F","O_MRAP_02_gmg_F","O_MRAP_02_hmg_F"];
+    _Unit_Pool_S = ["O_MU_islam_TL_F","O_MU_islam_TL_F","O_MU_islam_TL_F","CAF_AG_EEUR_R_RPG","CAF_AG_EEUR_R_AK47","CAF_AG_EEUR_R_AK74","CAF_AG_EEUR_R_PKM","CAF_AG_EEUR_R_RPK74","CAF_AG_EEUR_R_SVD","O_MU_islam_engineer_F","O_MU_islam_R2_F","O_MU_islam_R1_F","O_MU_islam_A_F","O_MU_islam_AR_F","O_MU_islam_M_F","O_MU_islam_medic_F","O_MU_islam_SL_F","O_MU_islam_TL_F"];
+    _Unit_Pool_V = ["O_MU_islam_Offroad_01_repair_F","O_MU_IS_Jeep","O_MU_IS_Jeep","O_MU_islam_Offroad_01_armed_F","O_MU_islam_Offroad_01_F","CAF_AG_eeur_r_van_01","O_MU_MIL_Truck_02_covered_F","O_MU_MIL_Truck_02_Ammo_F"];
     _Unit_Pool_T = ["O_MBT_02_arty_F","O_APC_Tracked_02_cannon_F","O_APC_Wheeled_02_rcws_F","O_MBT_02_cannon_F","O_APC_Tracked_02_AA_F"];
-	_Unit_Pool_A = ["O_Heli_Attack_02_F","O_Heli_Light_02_F","O_Heli_Light_02_armed_F"];
+	_Unit_Pool_A = ["O_Heli_Light_02_F","O_Heli_Light_02_armed_F","EC635_Unarmed_CSAT","O_mas_MI8","O_Heli_Light_02_v2_F","O_Heli_Light_02_unarmed_F"];
   };
 //-------------------------------------------------------------------------------------------------
 // BLUFOR (A3)
