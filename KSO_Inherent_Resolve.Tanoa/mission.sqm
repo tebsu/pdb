@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=3095;
+		nextID=3140;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=67;
+		nextID=91;
 	};
 	class Camera
 	{
-		pos[]={12431.84,282.98755,13128.909};
-		dir[]={-0.72899526,-0.63738662,-0.24973822};
-		up[]={-0.60300058,0.77053082,-0.20657544};
-		aside[]={-0.32409906,-1.7217826e-007,0.94606};
+		pos[]={13087.999,186.16928,9931.4141};
+		dir[]={-0.67947423,-0.65262681,0.33525479};
+		up[]={-0.58526391,0.7576791,0.28877094};
+		aside[]={0.44247511,-3.8184226e-008,0.89678198};
 	};
 };
 binarizationWanted=0;
@@ -125,17 +125,19 @@ addons[]=
 	"A3_Soft_F_Gamma_Truck_01",
 	"CUP_CAStructures_Rail",
 	"MAP_EU",
-	"A3_Props_F_Exp_Infrastructure_Railways",
 	"A3_Soft_F_Beta_Truck_01",
 	"A3_Soft_F_Exp_Truck_01",
 	"MU_vehicles",
-	"MU_MILITIA"
+	"MU_MILITIA",
+	"CUP_Misc3_Config",
+	"A3_Weapons_F_Explosives",
+	"A3_Props_F_Exp_Infrastructure_Railways"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=76;
+		items=77;
 		class Item0
 		{
 			className="A3_Supplies_F_Heli";
@@ -622,6 +624,11 @@ class AddonsMetaData
 			className="MU_MILITIA";
 			name="MU_MILITIA";
 		};
+		class Item76
+		{
+			className="CUP_Misc3_Config";
+			name="CUP_Misc3_Config";
+		};
 	};
 };
 randomSeed=6781822;
@@ -657,7 +664,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=233;
+		items=270;
 		class Item0
 		{
 			dataType="Object";
@@ -8796,7 +8803,7 @@ class Mission
 		class Item101
 		{
 			dataType="Trigger";
-			position[]={2985.0259,92.214783,12253.725};
+			position[]={2983.6453,89.803581,12220.651};
 			class Attributes
 			{
 				name="z10";
@@ -9514,7 +9521,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={7463.2969,6.8669996,8538.3164};
-			angle=3.9407926;
+			angle=3.9407904;
 			class Attributes
 			{
 				name="z51";
@@ -9653,7 +9660,7 @@ class Mission
 		class Item135
 		{
 			dataType="Trigger";
-			position[]={11639.493,7.0500002,13068.361};
+			position[]={11653.25,7.0841675,13062.188};
 			angle=3.6135278;
 			class Attributes
 			{
@@ -9930,7 +9937,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={8534.3994,19.577415,10281.066};
-			angle=3.9407923;
+			angle=3.9407902;
 			class Attributes
 			{
 				name="z61";
@@ -17039,23 +17046,6 @@ class Mission
 		};
 		class Item210
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4873.1143,3.9398015,8832.9521};
-				angles[]={6.2736359,4.1752739,0.015203659};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=3056;
-			type="Land_RailwayCar_01_tank_F";
-			atlOffset=0.076776266;
-		};
-		class Item211
-		{
 			dataType="Trigger";
 			position[]={4921.2905,2.6674316,8783.9951};
 			class Attributes
@@ -17073,7 +17063,7 @@ class Mission
 			id=3057;
 			type="EmptyDetector";
 		};
-		class Item212
+		class Item211
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17089,7 +17079,7 @@ class Mission
 			id=3058;
 			type="B_Truck_01_transport_F";
 		};
-		class Item213
+		class Item212
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17106,7 +17096,7 @@ class Mission
 			type="B_T_Truck_01_transport_F";
 			atlOffset=-2.3841858e-007;
 		};
-		class Item214
+		class Item213
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17204,7 +17194,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item215
+		class Item214
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17322,30 +17312,13 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item216
+		class Item215
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11839.592,8.8512726,13067.627};
-				angles[]={0,0.28298894,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=3062;
-			type="EC635_ADAC";
-			atlOffset=-3.0994415e-005;
-		};
-		class Item217
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11688.216,12.330921,13125.847};
-				angles[]={0,4.9638562,0};
+				position[]={11680.88,12.330921,13108.687};
+				angles[]={0,0.29818663,0};
 			};
 			side="Empty";
 			flags=4;
@@ -17435,7 +17408,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item218
+		class Item216
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17451,7 +17424,7 @@ class Mission
 			id=3067;
 			type="O_MU_MIL_Heli_Light_02_unarmed_F";
 		};
-		class Item219
+		class Item217
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17493,11 +17466,11 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item220
+		class Item218
 		{
 			dataType="Trigger";
 			position[]={12167.443,36.240002,5256.6411};
-			angle=3.6135283;
+			angle=3.6135278;
 			class Attributes
 			{
 				onActivation="bomb=""Bo_GBU12_LGB"" createVehicle (getPos IED_8); deletevehicle IED_8;  " \n "bomb=""Bo_GBU12_LGB"" createVehicle (getPos IED_9); deletevehicle IED_9;   " \n "bomb=""M_Mo_82mm_AT_LG"" createVehicle (getPos IED_10); deletevehicle IED_10;  " \n "bomb=""M_Mo_82mm_AT_LG"" createVehicle (getPos IED_11); deletevehicle IED_11;  " \n "bomb=""M_Mo_82mm_AT_LG"" createVehicle (getPos IED_12); deletevehicle IED_12;  " \n "bomb=""M_Mo_82mm_AT_LG"" createVehicle (getPos IED_13); deletevehicle IED_13;";
@@ -17510,7 +17483,7 @@ class Mission
 			id=3069;
 			type="EmptyDetectorArea10x10";
 		};
-		class Item221
+		class Item219
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17552,7 +17525,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item222
+		class Item220
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17594,7 +17567,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item223
+		class Item221
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17636,7 +17609,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item224
+		class Item222
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17678,7 +17651,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item225
+		class Item223
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17720,7 +17693,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item226
+		class Item224
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17737,6 +17710,7 @@ class Mission
 			};
 			id=3082;
 			type="C_Offroad_02_unarmed_F_orange";
+			atlOffset=-2.9563904e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17818,7 +17792,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item227
+		class Item225
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17833,12 +17807,13 @@ class Mission
 			};
 			id=3089;
 			type="O_mas_ZU23_AAF";
+			atlOffset=0.0010933876;
 		};
-		class Item228
+		class Item226
 		{
 			dataType="Trigger";
 			position[]={5597.4268,3.783,10086.509};
-			angle=2.3634899;
+			angle=2.3634889;
 			class Attributes
 			{
 				name="z62";
@@ -17855,11 +17830,11 @@ class Mission
 			type="EmptyDetector";
 			atlOffset=0.11299992;
 		};
-		class Item229
+		class Item227
 		{
 			dataType="Trigger";
 			position[]={14345.206,17.103842,9075.5801};
-			angle=3.1099002;
+			angle=3.1098998;
 			class Attributes
 			{
 				name="z81";
@@ -17875,7 +17850,7 @@ class Mission
 			id=3091;
 			type="EmptyDetector";
 		};
-		class Item230
+		class Item228
 		{
 			dataType="Trigger";
 			position[]={10975.167,97.248932,7953.3501};
@@ -17895,7 +17870,7 @@ class Mission
 			id=3092;
 			type="EmptyDetector";
 		};
-		class Item231
+		class Item229
 		{
 			dataType="Trigger";
 			position[]={13545.307,2.6500001,11934.202};
@@ -17915,7 +17890,7 @@ class Mission
 			id=3093;
 			type="EmptyDetector";
 		};
-		class Item232
+		class Item230
 		{
 			dataType="Trigger";
 			position[]={11821.763,11.990757,12930.255};
@@ -17934,6 +17909,1406 @@ class Mission
 			};
 			id=3094;
 			type="EmptyDetector";
+		};
+		class Item231
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12223.331,7.0117035,12935.331};
+				angles[]={0.0080009829,0,6.2805333};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3096;
+			type="ACE_IEDUrbanSmall_Range";
+			atlOffset=-8.8691711e-005;
+		};
+		class Item232
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11625.719,7.8796401,13055.186};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3097;
+			type="hiluxWreck";
+		};
+		class Item233
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11419.314,0,5744.9531};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3099;
+			type="UnderwaterMine";
+			atlOffset=9.6499472;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item234
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11464.306,-1.9197845,5725.1621};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3100;
+			type="UnderwaterMine";
+			atlOffset=9.6406164;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item235
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11436.711,-1.4736214,5714.9663};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3101;
+			type="UnderwaterMine";
+			atlOffset=9.6630135;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item236
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11446.31,-2.5848789,5671.1846};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3102;
+			type="UnderwaterMine";
+			atlOffset=9.6145639;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item237
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11467.904,-4.2012205,5695.1753};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3103;
+			type="UnderwaterMine";
+			atlOffset=9.6512794;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item238
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11474.504,-2.9616394,5654.3921};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3104;
+			type="UnderwaterMine";
+			atlOffset=9.6372843;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item239
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13647.824,-21.525404,12660.578};
+				angles[]={0,1.9806691,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3105;
+			type="UnderwaterMine";
+			atlOffset=5.41325;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item240
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13860.428,-19.939388,12637.441};
+				angles[]={0,1.9806691,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3106;
+			type="UnderwaterMine";
+			atlOffset=9.6474648;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item241
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13613.39,-21.543657,12656.572};
+				angles[]={0,1.9806691,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3107;
+			type="UnderwaterMine";
+			atlOffset=5.4283161;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item242
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13569.41,-20.007526,12665.215};
+				angles[]={0,1.9806691,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3108;
+			type="UnderwaterMine";
+			atlOffset=5.3771992;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item243
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13831.491,-20.608618,12646.09};
+				angles[]={0,1.9806691,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3109;
+			type="UnderwaterMine";
+			atlOffset=9.6393776;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item244
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13791.456,-20.488976,12656.289};
+				angles[]={0,1.9806691,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3110;
+			type="UnderwaterMine";
+			atlOffset=9.589962;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item245
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4269.7798,-14.524363,9639.8008};
+				angles[]={0,1.9806691,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3111;
+			type="UnderwaterMine";
+			atlOffset=8.907835;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item246
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4399.4443,-7.4924564,9612.6943};
+				angles[]={0,1.9806691,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3112;
+			type="UnderwaterMine";
+			atlOffset=9.6681271;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item247
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4185.437,-13.005523,9644.6465};
+				angles[]={0,1.9806691,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3113;
+			type="UnderwaterMine";
+			atlOffset=5.9997549;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item248
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4096.2476,-9.543416,9648.5244};
+				angles[]={0,1.9806691,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3114;
+			type="UnderwaterMine";
+			atlOffset=3.5201006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item249
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4471.4268,-11.696326,9592.3086};
+				angles[]={0.08247932,1.9806691,0.13778783};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3115;
+			type="UnderwaterMine";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item250
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4330.4727,-13.131073,9631.542};
+				angles[]={0,1.9806691,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3116;
+			type="UnderwaterMine";
+			atlOffset=9.5699692;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item251
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3240.0293,-8.4065418,9694.2549};
+				angles[]={0,4.516346,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3117;
+			type="UnderwaterMine";
+			atlOffset=8.8569355;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item252
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3118.01,-1.5018973,9642.6895};
+				angles[]={0,4.516346,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3118;
+			type="UnderwaterMine";
+			atlOffset=9.6638794;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item253
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3312.1172,-5.7060628,9738.3057};
+				angles[]={0,4.516346,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3119;
+			type="UnderwaterMine";
+			atlOffset=5.9661813;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item254
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3387.6377,-6.742764,9785.9131};
+				angles[]={0,4.516346,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3120;
+			type="UnderwaterMine";
+			atlOffset=3.4978576;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item255
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3047.2319,-7.1940527,9618.4512};
+				angles[]={0.085126832,4.516346,6.2565231};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3121;
+			type="UnderwaterMine";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item256
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3185.4375,-5.5127664,9666.4775};
+				angles[]={0,4.516346,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3122;
+			type="UnderwaterMine";
+			atlOffset=9.577322;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item257
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4848.7983,4.5221272,8790.4063};
+				angles[]={0,3.3034093,6.2698579};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3123;
+			type="Land_Locomotive_01_v2_F";
+			atlOffset=-0.00015759468;
+		};
+		class Item258
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4875.8027,5.6158218,8825.8877};
+				angles[]={0.03731497,4.8346233,0.0026520467};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3126;
+			type="MAP_Rail_Zavora";
+			atlOffset=2.3841858e-007;
+		};
+		class Item259
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4838.6226,5.8616614,8821.4844};
+				angles[]={0.010664274,1.7854427,6.2778587};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3127;
+			type="MAP_Rail_Zavora";
+		};
+		class Item260
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4875.562,4.6595173,8834.877};
+				angles[]={6.2736359,0.99690592,0.015203659};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3128;
+			type="MAP_wagon_box";
+			atlOffset=0.075494766;
+		};
+		class Item261
+		{
+			dataType="Trigger";
+			position[]={12066.11,182.78072,9668.2236};
+			angle=3.5195086;
+			class Attributes
+			{
+				name="z83";
+				text="katkoula fueldepot enemy";
+				condition="time > 1";
+				onActivation="fun=[""z83"",[83,1,0],[2,1,40,5],[],[],[],[0,0,0,1]] spawn DAC_Zone;";
+				sizeA=150;
+				sizeB=150;
+				repeatable=1;
+				activationBy="LOGIC";
+				isRectangle=1;
+			};
+			id=3130;
+			type="EmptyDetector";
+		};
+		class Item262
+		{
+			dataType="Trigger";
+			position[]={11007.08,106.41059,9701.5908};
+			angle=3.5195086;
+			class Attributes
+			{
+				name="z84";
+				text="katkoula fueldepot enemy";
+				condition="time > 1";
+				onActivation="fun=[""z84"",[84,1,0],[3,1,40,5],[],[],[],[0,0,0,1]] spawn DAC_Zone;";
+				sizeA=150;
+				sizeB=150;
+				repeatable=1;
+				activationBy="LOGIC";
+				isRectangle=1;
+			};
+			id=3131;
+			type="EmptyDetector";
+		};
+		class Item263
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9494.6748,-13.009169,4908.8228};
+				angles[]={0,1.3597435,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3132;
+			type="UnderwaterMine";
+			atlOffset=8.5242786;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item264
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9654.5518,0.38336575,4826.9199};
+				angles[]={0,2.1762123,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3133;
+			type="UnderwaterMine";
+			atlOffset=7.1542983;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item265
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9468.998,-7.7637053,4885.5303};
+				angles[]={0,1.3597435,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3134;
+			type="UnderwaterMine";
+			atlOffset=9.6201124;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item266
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9428.1982,0.33874702,4866.9727};
+				angles[]={0,1.3597435,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3135;
+			type="UnderwaterMine";
+			atlOffset=8.4709682;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item267
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9627.8467,0.14691305,4841.0264};
+				angles[]={0,2.1762123,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3136;
+			type="UnderwaterMine";
+			atlOffset=7.1729608;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item268
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9590.5566,-0.94770193,4858.8096};
+				angles[]={0,2.1762123,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=3137;
+			type="UnderwaterMine";
+			atlOffset=7.1802917;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item269
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13057.952,163.04076,9934.749};
+				angles[]={0.17938493,3.0813613,0.021327924};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				fuel=0;
+			};
+			id=3139;
+			type="C_Van_01_box_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="Enh_onKilledEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="Enh_onRespawnEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[2]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="Enh_onDamagedEvent";
+					expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				nAttributes=4;
+			};
 		};
 	};
 };
