@@ -1,0 +1,1 @@
+these have to be put into the Arma 3 root folder ! Without it, extDB3 wont work
