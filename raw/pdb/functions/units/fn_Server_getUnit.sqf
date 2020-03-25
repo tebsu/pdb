@@ -1,6 +1,10 @@
 /*
 *	From Database to Arma 3 Unit
 */
+pdb_debug_unit = "initializing saving..";
+publicVariable "pdb_debug_unit";
+pdb_debug_unit = format["_Player is %1. (getUnit)",_this select 0];
+publicVariable "pdb_debug_unit";
 
 _Player = _this select 0;
 waitUntil {isPlayer _Player};
