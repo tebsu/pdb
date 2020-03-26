@@ -16,7 +16,7 @@ if(_iCountItems > 0) then {
 		_name = call compile (_aResult select (_i+2));
 		_name2 = format["<t color='#00FF33'>--Load %1--</t>", _name];
 		
-		{pdb_template_interface addAction[_name2,{ {[_id] execVM "\pdb\functions\templates\fn_Server_load_template.sqf"} remoteExec ["call",2]; }];} remoteExec ["call",-2];
+		{pdb_template_interface addAction["test",{ {[_id] execVM "\pdb\functions\templates\fn_Server_load_template.sqf"} remoteExec ["call",2]; }];} remoteExec ["call",-2];
 		
 
 	};
