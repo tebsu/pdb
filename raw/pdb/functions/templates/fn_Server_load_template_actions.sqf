@@ -1,4 +1,4 @@
-if (isServer && !hasInterface){
+if (isServer){
 
 	pdb_template_interface remoteExec ["removeAllActions",-2]; 
 	{pdb_template_interface addAction[format["<t color='#00FF33'>--SAVE INVENTORY--</t>"],{ {[] execVM "\pdb\functions\templates\fn_Server_save_template.sqf"} remoteExec ["call",2]; }];} remoteExec ["call",-2]; 
