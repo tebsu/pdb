@@ -1,5 +1,3 @@
-if (!isServer) exitWith {};
-
 _pdb_marker_pos = getMarkerPos "pdb_template_station";
 _object = nearestObjects[_pdb_marker_pos,["all"],3];
 _object = _object select 0;
