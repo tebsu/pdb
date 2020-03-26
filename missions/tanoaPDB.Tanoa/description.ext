@@ -1,0 +1,41 @@
+#include "R3F_LOG\desc_include.h"
+
+respawn="BASE";
+respawnDelay=2;
+RespawnDialog = 1;
+disabledAI=1;
+aiKills = 1;
+enableItemsDropping = 0;
+enableDebugConsole = 1;
+difficulty = "custom";
+disableChannels[]={0,1,2,3,4,6};
+author = "Spackenbremse";
+onLoadName = "Saftschubsen 8==D";
+briefing = 0;
+class Header
+{
+	gameType=COOP;
+	difficulty = "custom";
+	minPlayers=1;
+	maxPlayers=10;
+};
+class CfgRemoteExec
+{
+        class Commands
+        {
+			mode = 2;
+			jip = 1;
+			
+			class getVariable {allowedTargets = 0;};
+			class setVariable {allowedTargets = 0;};
+        };
+        class Functions
+        {
+			mode = 2;
+			jip = 1;                                       //no functions can use jip
+
+			class BIS_fnc_MP {allowedTargets = 0;};   //execute only on clients, server execution denied
+			class BIS_fnc_execVM {allowedTargets = 0;}; 
+			class ace_common_fnc_setAllGear {allowedTargets = 0;}; 
+        };
+};
