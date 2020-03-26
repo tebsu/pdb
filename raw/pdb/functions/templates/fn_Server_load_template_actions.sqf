@@ -15,12 +15,13 @@ if(_iCountItems > 0) then {
  { 
   _id = (_aResult select (_i+0));  
   _name = format ["%1",_aResult select (_i+1)];  
+  publicVariable "_id";
+  publicVariable "_Name";
 
   {pdb_template_interface addAction[_name,{ {[_id] execVM "\pdb\functions\templates\fn_Server_load_template.sqf"} remoteExec ["call",2]; }];} remoteExec ["call",-2]; 
 
 	[_id] execVM "\pdb\functions\misc\debug.sqf";
-	 publicVariable "_id";
- publicVariable "_Name";
+	 
    
  }; 
 }; 
