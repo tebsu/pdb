@@ -8,6 +8,8 @@ clearBackpackCargoGlobal _object;
 clearMagazineCargoGlobal _object;
 clearWeaponCargoGlobal _object;
 
+[_template_id] execVM "\pdb\functions\misc\debug.sqf";
+
 systemChat format["loading id %1 into %2",_template_id,_object];
 
 _sql = "extDB3" callExtension format["0:SQL:SELECT invItem FROM wi_inventory_templates WHERE id = '%1'",_template_id];

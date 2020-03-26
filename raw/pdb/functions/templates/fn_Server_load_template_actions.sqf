@@ -20,7 +20,6 @@ if(_iCountItems > 0) then {
 
   {pdb_template_interface addAction[pdb_nameTemplate,{ {[pdb_idTemplate] execVM "\pdb\functions\templates\fn_Server_load_template.sqf"} remoteExec ["call",2]; }];} remoteExec ["call",-2]; 
 
-	[pdb_nameTemplate] execVM "\pdb\functions\misc\debug.sqf";
 	sleep 2;
  }; 
 }; 
