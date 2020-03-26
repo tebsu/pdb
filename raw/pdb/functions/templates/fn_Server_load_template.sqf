@@ -10,7 +10,7 @@ clearWeaponCargoGlobal _object;
 
 systemChat format["loading id %1 into %2",_template_id,_object];
 
-_sql = "extDB3" callExtension format["0:SQL:SELECT invItem FROM inventory_templates WHERE id = '%1'",_template_id];
+_sql = "extDB3" callExtension format["0:SQL:SELECT invItem FROM wi_inventory_templates WHERE id = '%1'",_template_id];
 _aResult = _sql splitString "[,]";
 
 _iCountItems = (count _aResult - 1) / 2;
@@ -24,7 +24,7 @@ if(_iCountItems > 0) then {
 	
 };
 
-_sql = "extDB3" callExtension format["0:SQL:SELECT invBackpack FROM inventory_templates WHERE id = '%1'",_template_id];
+_sql = "extDB3" callExtension format["0:SQL:SELECT invBackpack FROM wi_inventory_templates WHERE id = '%1'",_template_id];
 _aResult = _sql splitString "[,]";
 _iCountItems = (count _aResult - 1) / 2;
 if(_iCountItems > 0) then {
@@ -37,7 +37,7 @@ if(_iCountItems > 0) then {
 
 };
 
-_sql = "extDB3" callExtension format["0:SQL:SELECT invMagazine FROM inventory_templates WHERE id = '%1'",_template_id];
+_sql = "extDB3" callExtension format["0:SQL:SELECT invMagazine FROM wi_inventory_templates WHERE id = '%1'",_template_id];
 _aResult = _sql splitString "[,]";
 _iCountItems = (count _aResult - 1) / 2;
 if(_iCountItems > 0) then {
@@ -50,7 +50,7 @@ if(_iCountItems > 0) then {
 
 };
 
-_sql = "extDB3" callExtension format["0:SQL:SELECT invWeapon FROM inventory_templates WHERE id = '%1'",_template_id];
+_sql = "extDB3" callExtension format["0:SQL:SELECT invWeapon FROM wi_inventory_templates WHERE id = '%1'",_template_id];
 _aResult = _sql splitString "[,]";
 _iCountItems = (count _aResult - 1) / 2;
 if(_iCountItems > 0) then {

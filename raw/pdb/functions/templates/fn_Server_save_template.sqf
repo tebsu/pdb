@@ -13,5 +13,5 @@ _objBachpackCargo = str formatText ["%1", (getBackpackCargo _object)];
 _objMagazineCargo = str formatText ["%1", (getMagazineCargo _object)];
 _objWeaponCargo = str formatText ["%1", (getWeaponCargo _object)];
 
-_sql_res = "extDB3" callExtension format["0:SQL:INSERT INTO inventory_templates SET invItem = '%1',invBackpack = '%2',invMagazine = '%3',invWeapon = '%4', invName = '%5'",_objItemCargo,_objBachpackCargo,_objMagazineCargo,_objWeaponCargo,_objClassName];
+_sql_res = "extDB3" callExtension format["0:SQL:INSERT INTO wi_inventory_templates SET invItem = '%1',invBackpack = '%2',invMagazine = '%3',invWeapon = '%4', invName = '%5'",_objItemCargo,_objBachpackCargo,_objMagazineCargo,_objWeaponCargo,_objClassName];
 }
