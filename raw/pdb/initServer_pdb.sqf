@@ -47,30 +47,23 @@ pdb_blacklist_Obj = [
 					
 pdb_allowed_veh = [
 	"Car",
-	"Jonzie_Vehicles",
-	"Autonomous",
-	"Armored",
-	"Air",
+	"Helicopter",
+	"Motorcycle",
+	"Plane",
 	"Ship",
-	"Support",
-	"BWE_RF",
-	"BWE_KF",
-	"EWK_Cars",
-	"BWA3_VehClass_Wheeled_Fleck",
-	"BWA3_VehClass_Wheeled_Tropen",
-	"air",
-	"BWE_HS",
-	"Huey_Helicopters_UH1D",
-	"14jgkp_Vehicle_Flecktarn",
-	"CY_vehicule",
-	"gm_vc_prototype"
+	"StaticWeapon",
+	"Submarine",
+	"TrackedAPC",
+	"Tank",
+	"WheeledAPC"
 ];
 
 {
 	_vehicleType = typeOf _x;
 	_vehicleClass = getText (configFile >> "CfgVehicles" >> _vehicleType >> "vehicleClass");
+	_parentVehicleType = (_x call BIS_fnc_objectType) select 1;
 		
-	if(_vehicleClass in pdb_allowed_veh) then {
+	if(_parentVehicleType in pdb_allowed_veh) then {
 		clearItemCargoGlobal _x;
 		clearBackpackCargoGlobal _x;
 		clearMagazineCargoGlobal _x;
@@ -79,8 +72,8 @@ pdb_allowed_veh = [
 } forEach (vehicles);
 
 
-_setInterface = [pdb_template_interface] execVM "\pdb\functions\templates\fn_Server_load_template_actions.sqf";
-waitUntil{scriptDone _setInterface};
+//_setInterface = [pdb_template_interface] execVM "\pdb\functions\templates\fn_Server_load_template_actions.sqf";
+//waitUntil{scriptDone _setInterface};
 
 _sql_res = "extDB3" callExtension format["0:SQL:SELECT * FROM mission WHERE missionMap = '%1' AND missionName = '%2'",pdb_map,pdb_mission];
 _sql_res = _sql_res splitString "[,]";

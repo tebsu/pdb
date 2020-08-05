@@ -11,10 +11,11 @@ _sql_res = _sql_res splitString "[,]";
 if(count _sql_res > 2) then {
 	{
 		_vehicleType = typeOf _x;
+		_parentVehicleType = (_x call BIS_fnc_objectType) select 1;
 		_vehicleClass = getText (configFile >> "CfgVehicles" >> _vehicleType >> "vehicleClass");
 		_disableFlag = _x getVariable "disable_pdb";
 		
-		if(_vehicleClass in pdb_allowed_veh && isNil "_disableFlag") then {
+		if(_parentVehicleType in pdb_allowed_veh && isNil "_disableFlag") then {
 			deleteVehicle _x;
 		};
 	} forEach (vehicles);
@@ -69,8 +70,11 @@ if(count _sql_res > 2) then {
 	{
 		_x allowDamage true;
 		_vehicleType = typeOf _x;
+		_parentVehicleType = (_x call BIS_fnc_objectType) select 1;
 		_vehicleClass = getText (configFile >> "CfgVehicles" >> _vehicleType >> "vehicleClass");
-		//if(_vehicleClass == "Car" || _vehicleClass == "Autonomous" || _vehicleClass == "Armored" || _vehicleClass == "Air" || _vehicleClass == "Ship" || _vehicleClass == "Support" || _vehicleClass == "BWE_RF" || _vehicleClass == "BWE_KF" || _vehicleClass == "EWK_Cars" || _vehicleClass == "BWA3_VehClass_Wheeled_Fleck" || _vehicleClass == "air" || _vehicleClass == "BWE_HS") then {
+
+
+
 		if (_vehicleClass in pdb_allowed_veh) then {
 		_vehicleUID = _x getVariable "vehicleuid";
 			_vehDamage = [_x,_vehicleUID] execVM "\pdb\functions\vehicles\fn_Server_getVehicleHitpointDamage.sqf";

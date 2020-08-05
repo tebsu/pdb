@@ -6,11 +6,12 @@ sleep 2;
 
 {
 	_vehicleType = typeOf _x;
+	_parentVehicleType = (_x call BIS_fnc_objectType) select 1;
 	_vehicleClass = getText (configFile >> "CfgVehicles" >> _vehicleType >> "vehicleClass");
 	_vehicleName = getText (configFile >> "CfgVehicles" >> _vehicleType >> "displayName");
 	_disableFlag = _x getVariable "disable_pdb";
 	
-	if(isNil "_disableFlag" && _vehicleClass in pdb_allowed_veh) then {
+	if(isNil "_disableFlag" && _parentVehicleType in pdb_allowed_veh) then {
 		
 		_vehicleUID = _x getVariable "vehicleuid";
 		_vehiclePos = format ["%1",(getPosWorld _x)];
