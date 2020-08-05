@@ -62,7 +62,8 @@ pdb_allowed_veh = [
 	"BWE_HS",
 	"Huey_Helicopters_UH1D",
 	"14jgkp_Vehicle_Flecktarn",
-	"CY_vehicule"
+	"CY_vehicule",
+	"gm_vc_prototype"
 ];
 
 {
